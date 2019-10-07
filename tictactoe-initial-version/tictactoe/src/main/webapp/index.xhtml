@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xml:lang="pt-BR" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://xmlns.jcp.org/jsf/html ">
+<h:head><title>Game TicTacToe</title></h:head>
+<h:body>
+    <h:form id="f">
+        <p:growl id="growl" life="3000"/>
+        <h1>Tic-Tac-Toe</h1>
+        Click on the fields to play
+        <h:panelGrid id="btnsParent" columns="3" style="margin-bottom:10px" cellpadding="5">
+            <h:commandButton id="btn1_1" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+            <h:commandButton id="btn2_1" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+            <h:commandButton id="btn3_1" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+
+            <h:commandButton id="btn1_2" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+            <h:commandButton id="btn2_2" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+            <h:commandButton id="btn3_2" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+
+            <h:commandButton id="btn1_3" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+            <h:commandButton id="btn2_3" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+            <h:commandButton id="btn3_3" update="growl" actionListener="#{ticTacToeGameUiController.play}"
+                             style="width: 40px; height: 40px"/>
+            <!-- Add the other components -->
+        </h:panelGrid>
+
+        <h:inputText id="result" value="#{ticTacToeGameUiController.gameResult}"/>
+
+        <!-- Add button action -->
+        <h:commandButton value="Reset game session" actionListener="#{ticTacToeGameUiController.reset}"/>
+
+    </h:form>
+</h:body>
+</html>
